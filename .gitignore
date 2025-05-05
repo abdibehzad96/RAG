@@ -7,3 +7,4 @@ venv/
 .idea/
 # ignore the .env file
 .env
+key.txt
