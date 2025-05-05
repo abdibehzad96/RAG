@@ -72,6 +72,5 @@ def generate_response(question, relevant_chunks, client):
             },
         ],
     )
-
     answer = response.choices[0].message
     return answer
