@@ -23,18 +23,18 @@ collection = chroma_client.get_or_create_collection(
 ) # We create a collection in ChromaDB to store our documents and their embeddings
 
 client = OpenAI(api_key=openai_key) # Initialize OpenAI client
-response = client.chat.completions.create(
-    model="gpt-3.5-turbo",
-    messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {
-            "role": "user",
-            "content": "What is human life expectancy in the United States?",
-        },
-    ],
-) # Example of using OpenAI's chat completion API
+# response = client.chat.completions.create(
+#     model="gpt-3.5-turbo",
+#     messages=[
+#         {"role": "system", "content": "You are a helpful assistant."},
+#         {
+#             "role": "user",
+#             "content": "What is human life expectancy in the United States?",
+#         },
+#     ],
+# ) # Example of using OpenAI's chat completion API
 
-print(response) # Print the response from OpenAI
+# print(response) # Print the response from OpenAI
 
 directory_path = "./news_articles"
 documents = load_documents_from_directory(directory_path)

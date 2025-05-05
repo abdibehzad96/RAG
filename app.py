@@ -43,10 +43,6 @@ def query_documents(question, collection, n_results=2):
     relevant_chunks = [doc for sublist in results["documents"] for doc in sublist]
     print("==== Returning relevant chunks ====")
     return relevant_chunks
-    # for idx, document in enumerate(results["documents"][0]):
-    #     doc_id = results["ids"][0][idx]
-    #     distance = results["distances"][0][idx]
-    #     print(f"Found document chunk: {document} (ID: {doc_id}, Distance: {distance})")
 
 
 # Function to generate a response from OpenAI
